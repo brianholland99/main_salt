@@ -3,6 +3,7 @@ Salt configuration files for home network.  Clone to working directory such
 as /m/main_salt and make appropriate link(s).
 
 `ln -s /m/main_salt/srv/salt /srv/salt`
+
 `salt '*' state.apply`
 
 This is just an initial set of states to capture as much installation as
