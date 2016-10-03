@@ -9,7 +9,15 @@ openssh-server:
   pkg:
     - installed
 
+flake8:
+  pkg:
+    - installed
+
 vim-gnome:
+  pkg:
+    - installed
+
+python3-sqlalchemy:
   pkg:
     - installed
 
