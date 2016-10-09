@@ -9,9 +9,14 @@ openssh-server:
   pkg:
     - installed
 
-flake8:
+python3-style:
   pkg:
     - installed
+    - pkgs:
+      - python3-pep8
+      - python3-pep8-naming
+      - python-autopep8
+      - flake8
 
 vim-gnome:
   pkg:
@@ -34,4 +39,18 @@ google-packages:
       - google-chrome-stable
     - require:
       - pkgrepo: google-chrome-repo
-  
+
+oracle-virtualbox-repo:
+  pkgrepo.managed:
+    - human_name: Oracle Virtualbox
+    - name: deb [trusted=yes] http://download.virtualbox.org/virtualbox/debian xenial contrib
+    - file: /etc/apt/sources.list.d/virtualbox.list
+    - key_url: https://www.virtualbox.org/download/oracle_vbox.asc
+
+virtualbox:
+  pkg.installed:
+    - pkgs:
+      - virtualbox-5.1
+    - require:
+      - pkgrepo: oracle-virtualbox-repo
+
