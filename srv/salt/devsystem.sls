@@ -30,7 +30,7 @@ google-chrome-repo:
   pkgrepo.managed:
     - human_name: Google Chrome
     - name: deb http://dl.google.com/linux/chrome/deb/ stable main
-    - file: /etc/apt/sources.list.d/chrome-browser.list
+    - file: /etc/apt/sources.list.d/google-chrome-browser.list
     - key_url: https://dl-ssl.google.com/linux/linux_signing_key.pub
 
 google-packages:
@@ -40,12 +40,16 @@ google-packages:
     - require:
       - pkgrepo: google-chrome-repo
 
+# Added [trusted=yes] to repo info.  Adding the key below did not work as
+# there was a failure with "unauthenticated package" without the trusted flag.
+# Guess is that either the key is wrong, the package is unsigned, or some
+# configuration error below.
 oracle-virtualbox-repo:
   pkgrepo.managed:
     - human_name: Oracle Virtualbox
     - name: deb [trusted=yes] http://download.virtualbox.org/virtualbox/debian xenial contrib
-    - file: /etc/apt/sources.list.d/virtualbox.list
-    - key_url: https://www.virtualbox.org/download/oracle_vbox.asc
+    - file: /etc/apt/sources.list.d/oracle-virtualbox.list
+    #- key_url: https://www.virtualbox.org/download/oracle_vbox.asc
 
 virtualbox:
   pkg.installed:
