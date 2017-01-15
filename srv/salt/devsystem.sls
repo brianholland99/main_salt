@@ -26,6 +26,10 @@ python3-sqlalchemy:
   pkg:
     - installed
 
+python3-yaml:
+  pkg:
+    - installed
+
 vagrant:
   pkg.installed:
     - sources:

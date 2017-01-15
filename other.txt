@@ -1,0 +1,3 @@
+   93  apt-get install bsdtar   -- For trying to run vagrant gems?
+  718  apt-get install xsltproc -- For doing my recipes.
+  981  apt-get install libxml2-utils -- For xmllint (recipe validation)
