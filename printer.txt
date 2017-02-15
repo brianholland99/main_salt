@@ -1,0 +1,2 @@
+lpadmin -p hpjet -E -v socket://192.168.1.52
+lpadmin -d hpjet

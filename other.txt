@@ -1,3 +1,11 @@
+Possible applications to install. These were installed by hand to play with.
+Some will be installed in VMs instead.
+
    93  apt-get install bsdtar   -- For trying to run vagrant gems?
-  718  apt-get install xsltproc -- For doing my recipes.
-  981  apt-get install libxml2-utils -- For xmllint (recipe validation)
+  718  apt-get install xsltproc -- For doing my baking recipes.
+  981  apt-get install libxml2-utils -- For xmllint (baking recipe validation)
+ 1067  sudo apt-get install mate-core mate-desktop-environment mate-notification-daemon -- For RDP from laptop
+ 1114  apt-get install python3-selenium  -- For Python browser control
+ 1116  apt-get install chromium-chromedriver  -- For Python browser control
+ 1117  apt-get install python3-tk  -- Window GUI
+ 1119  apt-get install tesseract-ocr -- OCR
