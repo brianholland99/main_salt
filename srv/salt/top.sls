@@ -3,3 +3,4 @@ base:
     - devsystem
     - virtualbox
     - google-chrome
+    - pycharm

@@ -1,2 +1,5 @@
-lpadmin -p hpjet -E -v socket://192.168.1.52
-lpadmin -d hpjet
+lpadmin -p hp -v socket://192.168.1.52
+lpadmin -p hp -m drv:///hpcups.drv/hp-photosmart_c7200_series.ppd
+lpadmin -p hp -o PageSize=Letter.SM -o OptionDuplex=True 
+lpadmin -p hp -E
+lpadmin -d hp
