@@ -1,42 +1,18 @@
-# Use Unity desktop for now.  To switch to KDE, install kubuntu-desktop
-# instead of ubuntu-desktop.
-#
-ubuntu-desktop:
-  pkg:
-    - installed
+# Tools for dealing with VMs
 
-openssh-server:
-  pkg:
-    - installed
+oracle-virtualbox-repo:
+  pkgrepo.managed:
+    - human_name: Oracle Virtualbox
+    - name: deb http://download.virtualbox.org/virtualbox/debian xenial contrib
+    - file: /etc/apt/sources.list.d/oracle-virtualbox.list
+    - key_url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
 
-# python3-style:
-#   pkg:
-#     - installed
-#     - pkgs:
-#       - python3-pep8
-#       - python3-pep8-naming
-#       - python-autopep8
-#       - flake8
-#       - python3-mccabe
-
-vim-gnome:
-  pkg:
-    - installed
-
-python3-venv:
-  pkg:
-    - installed
-
-python3-sqlalchemy:
-  pkg:
-    - installed
-
-python3-yaml:
-  pkg:
-    - installed
+virtualbox:
+  pkg.installed:
     - pkgs:
-      - python3-yaml
-      - python3-ruamel.yaml  # Newer and maintained YAML
+      - virtualbox-5.1
+    - require:
+      - pkgrepo: oracle-virtualbox-repo
 
 vagrant:
   pkg.installed:
