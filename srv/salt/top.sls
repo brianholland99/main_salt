@@ -13,4 +13,5 @@ base:
     - pycharm
 
   '*':
-    - openssh-server
+    - openssh
+

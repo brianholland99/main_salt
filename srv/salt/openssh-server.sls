@@ -1,3 +1,0 @@
-openssh-server:
-  pkg:
-    - installed
