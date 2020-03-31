@@ -1,0 +1,4 @@
+gsettings set com.canonical.Unity.Launcher favorites "['application://unity-control-center.desktop', 'application://org.gnome.Nautilus.desktop', 'application://org.gnome.Software.desktop', 'application://google-chrome.desktop', 'unity://expo-icon', 'unity://devices', 'unity://running-apps']"
+dconf write /org/compiz/profiles/unity/plugins/unityshell/num-launchers 1
+dconf write /org/compiz/profiles/unity/plugins/unityshell/icon-size 32
+gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-hide-mode 0
